@@ -1,8 +1,9 @@
-package Frames;
-
-import Panels.MainPanel;
+package frames;
 
 import javax.swing.*;
+
+import panels.MainPanel;
+
 import java.awt.*;
 
 public class MainFrame extends JFrame {
@@ -12,9 +13,9 @@ public class MainFrame extends JFrame {
      */
     public static void main(String[] args) {
         JFrame frame = new MainFrame();
-        frame.setSize(1600, 1300);
+        frame.setSize(1600, 1000);
         frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-        frame.setTitle( "Frames.MainFrame" );
+        frame.setTitle( "frames.MainFrame" );
         frame.setContentPane( new MainPanel() );
         frame.setVisible( true );
     }
