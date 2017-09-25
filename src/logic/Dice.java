@@ -20,70 +20,85 @@ public class Dice
 		this.value = (int)(Math.random() * 6) + 1;
 	}
 	
-	public void DrawDice(Graphics g, int position){
+	public void DrawDice(Graphics g, int position, int panelWidth, int panelHeight){
 		g.setColor(Color.BLACK);
-		int x = 65 + ((position%15)*100), y = 65 + ((position / 15)* 100);
-		g.drawRect(x, y, 60, 60);
-		x += 3;
-		y += 3;
+		int width = (panelWidth / 100 * 16 ), height = (panelHeight / 100 * 40);
+		int x = 65 + ((position%6)*width), y = 65 + ((position / 6)* (height + 10));
+		g.drawRoundRect(x, y, height, height, 10 ,10); // to keep aspect ratio we will make them both the same
 		switch(value){
 		case 1:
-			DrawDiceOne(g, x, y);
+			DrawDiceOne(g, x, y, height);
 			break;
 		case 2:
-			DrawDiceTwo(g, x, y);
+			DrawDiceTwo(g, x, y, height);
 			break;
 		case 3:
-			DrawDiceThree(g, x, y);
+			DrawDiceThree(g, x, y, height);
 			break;
 		case 4:
-			DrawDiceFour(g, x, y);
+			DrawDiceFour(g, x, y, height);
 			break;
 		case 5:
-			DrawDiceFive(g, x, y);
+			DrawDiceFive(g, x, y, height);
 			break;
 		default:
-			DrawDiceSix(g, x, y);
+			DrawDiceSix(g, x, y, height);
 			break;
 		}
 	}
 	
-	public void DrawDiceOne(Graphics g, int x, int y){
-		g.fillOval(x + 20, y + 20, 15, 15);
+	private void DrawDiceOne(Graphics g, int x, int y, int height){
+		int width = (height / 3);
+		int balWidth = (height / 3) - 20;
+		g.fillOval(x + width + ((width / 2) - (balWidth / 2)), y + (width) + (width / 2) - (balWidth / 2), balWidth, balWidth);
 	}
-	
-	public void DrawDiceTwo(Graphics g, int x, int y){
-		g.fillOval(x + 40, y, 15, 15);
-		g.fillOval(x, y + 40, 15, 15);
+
+    private void DrawDiceTwo(Graphics g, int x, int y, int height){
+		int width = (height / 3);
+		int balWidth = (height / 3) - 20;
+		g.fillOval(x + (height - (balWidth + 6)), y + 6, balWidth, balWidth);
+		g.fillOval(x + 6, y + (height - balWidth - 6), balWidth, balWidth);
 	}
-	
-	public void DrawDiceThree(Graphics g, int x, int y){
-		g.fillOval(x + 40, y, 15, 15);
-		g.fillOval(x + 20, y + 20, 15, 15);
-		g.fillOval(x, y + 40, 15, 15);
+
+    private void DrawDiceThree(Graphics g, int x, int y, int height){
+		int width = (height / 3);
+		int balWidth = (height / 3) - 20;
+		g.fillOval(x + (height - (balWidth + 6)), y + 6, balWidth, balWidth);
+		g.fillOval(x + width + ((width / 2) - (balWidth / 2)), y + (width) + (width / 2) - (balWidth / 2), balWidth, balWidth);
+		g.fillOval(x + 6, y + (height - balWidth - 6), balWidth, balWidth);
 	}
-	
-	public void DrawDiceFour(Graphics g, int x, int y){
-		g.fillOval(x, y, 15, 15);
-		g.fillOval(x + 40, y, 15, 15);
-		g.fillOval(x, y + 40, 15, 15);
-		g.fillOval(x + 40, y + 40, 15, 15);
+
+    private void DrawDiceFour(Graphics g, int x, int y, int height){
+		int balWidth = (height / 3) - 20;
+		g.fillOval(x + 6, y + 6, balWidth, balWidth);
+		g.fillOval(x + (height - (balWidth + 6)), y + 6, balWidth, balWidth);
+
+		g.fillOval(x + 6, y + (height - balWidth - 6), balWidth, balWidth);
+		g.fillOval(x + (height - (balWidth + 6)), y + (height - balWidth - 6), balWidth, balWidth);
 	}
-	
-	public void DrawDiceFive(Graphics g, int x, int y){
-		g.fillOval(x, y, 15, 15);
-		g.fillOval(x + 40, y, 15, 15);
-		g.fillOval(x + 20, y + 20, 15, 15);
-		g.fillOval(x, y + 40, 15, 15);
-		g.fillOval(x + 40, y + 40, 15, 15);
+
+    private void DrawDiceFive(Graphics g, int x, int y, int height){
+		int width = (height / 3);
+		int balWidth = (height / 3) - 20;
+		g.fillOval(x + 6, y + 6, balWidth, balWidth);
+		g.fillOval(x + (height - (balWidth + 6)), y + 6, balWidth, balWidth);
+
+		g.fillOval(x + width + ((width / 2) - (balWidth / 2)), y + (width) + (width / 2) - (balWidth / 2), balWidth, balWidth);
+
+		g.fillOval(x + 6, y + (height - balWidth - 6), balWidth, balWidth);
+		g.fillOval(x + (height - (balWidth + 6)), y + (height - balWidth - 6), balWidth, balWidth);
 	}
-	
-	public void DrawDiceSix(Graphics g, int x, int y){
-		g.fillOval(x, y, 15, 15);
-		g.fillOval(x + 40, y, 15, 15);
-		g.fillOval(x, y + 20, 15, 15);
-		g.fillOval(x + 40, y + 20, 15, 15);
-		g.fillOval(x, y + 40, 15, 15);
-		g.fillOval(x + 40, y + 40, 15, 15);
+
+    private void DrawDiceSix(Graphics g, int x, int y, int height){
+		int width = (height / 3);
+		int balWidth = (height / 3) - 20;
+		g.fillOval(x + 6, y + 6, balWidth, balWidth);
+		g.fillOval(x + (height - (balWidth + 6)), y + 6, balWidth, balWidth);
+
+		g.fillOval(x + 6, y + (width) + (width / 2) - (balWidth / 2), balWidth, balWidth);
+		g.fillOval(x + (height - (balWidth + 6)), y + (width) + (width / 2) - (balWidth / 2), balWidth, balWidth);
+
+		g.fillOval(x + 6, y + (height - balWidth - 6), balWidth, balWidth);
+		g.fillOval(x + (height - (balWidth + 6)), y + (height - balWidth - 6), balWidth, balWidth);
 	}
 }

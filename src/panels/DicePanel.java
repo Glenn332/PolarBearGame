@@ -13,8 +13,7 @@ import logic.Dice;
 
 public class DicePanel extends JPanel
 {
-	public List<Dice> dices = new ArrayList<Dice>();
-	public Graphics draw;
+	private List<Dice> dices = new ArrayList<>();
 	public DicePanel (){
 		this.setBackground(ColorExtension.MY_RED());
 		addDice();
@@ -25,26 +24,23 @@ public class DicePanel extends JPanel
 		addDice();
 		addDice();
 		addDice();
-		addDice();
-		addDice();
-		addDice();
-		addDice();
-		addDice();
-		addDice();
-		addDice();
-		addDice();
 	}
 	
-	public void addDice(){
+	private void addDice(){
 		dices.add(new Dice());
+	}
+
+	public void ThrowDices(){
+		for(Dice dice : dices){
+			dice.ThrowDice();
+		}
 	}
 	
 	public void paintComponent( Graphics g ) {
 		super.paintComponent(g);
 		g.setColor(Color.BLACK);
 		for(int i=0; i < dices.size(); i++){
-			dices.get(i).ThrowDice();
-			dices.get(i).DrawDice(g, i);
+			dices.get(i).DrawDice(g, i, this.getWidth(), this.getHeight());
 		}
 	}
 }
