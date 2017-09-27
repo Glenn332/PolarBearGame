@@ -1,7 +1,6 @@
 package panels;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,17 +12,9 @@ import logic.Dice;
 
 public class DicePanel extends JPanel
 {
-	private List<Dice> dices = new ArrayList<>();
+	public List<Dice> dices = new ArrayList<>();
 	public DicePanel (){
 		this.setBackground(ColorExtension.MY_RED());
-		addDice();
-		addDice();
-		addDice();
-		addDice();
-		addDice();
-		addDice();
-		addDice();
-		addDice();
 	}
 	
 	private void addDice(){
@@ -33,6 +24,13 @@ public class DicePanel extends JPanel
 	public void ThrowDices(){
 		for(Dice dice : dices){
 			dice.ThrowDice();
+		}
+	}
+
+	public void CreateDices(int numberOfDices){
+		dices = new ArrayList<>();
+		for (int i = 0; i < numberOfDices; i++){
+			addDice();
 		}
 	}
 	

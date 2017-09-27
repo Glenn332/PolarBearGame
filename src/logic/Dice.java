@@ -46,59 +46,86 @@ public class Dice
 			break;
 		}
 	}
+
+	public int GetValue(){
+		return value;
+	}
 	
 	private void DrawDiceOne(Graphics g, int x, int y, int height){
 		int width = (height / 3);
 		int balWidth = (height / 3) - 20;
-		g.fillOval(x + width + ((width / 2) - (balWidth / 2)), y + (width) + (width / 2) - (balWidth / 2), balWidth, balWidth);
+		DrawBalMiddle(g, x, y, width, balWidth);
 	}
 
     private void DrawDiceTwo(Graphics g, int x, int y, int height){
 		int width = (height / 3);
 		int balWidth = (height / 3) - 20;
-		g.fillOval(x + (height - (balWidth + 6)), y + 6, balWidth, balWidth);
-		g.fillOval(x + 6, y + (height - balWidth - 6), balWidth, balWidth);
+		DrawBalTopRight(g, x, y, height, balWidth);
+		DrawBalBottomLeft(g, x, y, height, balWidth);
 	}
 
     private void DrawDiceThree(Graphics g, int x, int y, int height){
 		int width = (height / 3);
 		int balWidth = (height / 3) - 20;
-		g.fillOval(x + (height - (balWidth + 6)), y + 6, balWidth, balWidth);
-		g.fillOval(x + width + ((width / 2) - (balWidth / 2)), y + (width) + (width / 2) - (balWidth / 2), balWidth, balWidth);
-		g.fillOval(x + 6, y + (height - balWidth - 6), balWidth, balWidth);
+		DrawBalTopRight(g, x, y, height, balWidth);
+		DrawBalMiddle(g, x, y, width, balWidth);
+		DrawBalBottomLeft(g, x, y, height, balWidth);
 	}
 
     private void DrawDiceFour(Graphics g, int x, int y, int height){
 		int balWidth = (height / 3) - 20;
-		g.fillOval(x + 6, y + 6, balWidth, balWidth);
-		g.fillOval(x + (height - (balWidth + 6)), y + 6, balWidth, balWidth);
-
-		g.fillOval(x + 6, y + (height - balWidth - 6), balWidth, balWidth);
-		g.fillOval(x + (height - (balWidth + 6)), y + (height - balWidth - 6), balWidth, balWidth);
+		DrawBalTopLeft(g, x, y, balWidth);
+		DrawBalTopRight(g, x, y, height, balWidth);
+		DrawBalBottomLeft(g, x, y, height, balWidth);
+		DrawBalBottomRight(g, x, y, height, balWidth);
 	}
 
     private void DrawDiceFive(Graphics g, int x, int y, int height){
 		int width = (height / 3);
 		int balWidth = (height / 3) - 20;
-		g.fillOval(x + 6, y + 6, balWidth, balWidth);
-		g.fillOval(x + (height - (balWidth + 6)), y + 6, balWidth, balWidth);
-
-		g.fillOval(x + width + ((width / 2) - (balWidth / 2)), y + (width) + (width / 2) - (balWidth / 2), balWidth, balWidth);
-
-		g.fillOval(x + 6, y + (height - balWidth - 6), balWidth, balWidth);
-		g.fillOval(x + (height - (balWidth + 6)), y + (height - balWidth - 6), balWidth, balWidth);
+		DrawBalTopLeft(g, x, y, balWidth);
+		DrawBalTopRight(g, x, y, height, balWidth);
+		DrawBalMiddle(g, x, y, width, balWidth);
+		DrawBalBottomLeft(g, x, y, height, balWidth);
+		DrawBalBottomRight(g, x, y, height, balWidth);
 	}
 
     private void DrawDiceSix(Graphics g, int x, int y, int height){
 		int width = (height / 3);
 		int balWidth = (height / 3) - 20;
+		DrawBalTopLeft(g, x, y, balWidth);
+		DrawBalTopRight(g, x, y, height, balWidth);
+		DrawBalMiddleLeft(g, x, y, width, balWidth);
+		DrawBalMiddleRight(g, x, y, height, width, balWidth);
+		DrawBalBottomLeft(g, x, y, height, balWidth);
+		DrawBalBottomRight(g, x, y, height, balWidth);
+	}
+
+	private void DrawBalTopLeft(Graphics g, int x, int y, int balWidth){
 		g.fillOval(x + 6, y + 6, balWidth, balWidth);
+	}
+
+	private void DrawBalTopRight(Graphics g, int x, int y, int height, int balWidth){
 		g.fillOval(x + (height - (balWidth + 6)), y + 6, balWidth, balWidth);
+	}
 
+	private void DrawBalMiddleLeft(Graphics g, int x, int y, int width, int balWidth){
 		g.fillOval(x + 6, y + (width) + (width / 2) - (balWidth / 2), balWidth, balWidth);
-		g.fillOval(x + (height - (balWidth + 6)), y + (width) + (width / 2) - (balWidth / 2), balWidth, balWidth);
+	}
 
+	private void DrawBalMiddleRight(Graphics g, int x, int y, int height, int width, int balWidth){
+		g.fillOval(x + (height - (balWidth + 6)), y + (width) + (width / 2) - (balWidth / 2), balWidth, balWidth);
+	}
+
+	private void DrawBalBottomLeft(Graphics g, int x, int y, int height, int balWidth){
 		g.fillOval(x + 6, y + (height - balWidth - 6), balWidth, balWidth);
+	}
+
+	private void DrawBalBottomRight(Graphics g, int x, int y, int height, int balWidth){
 		g.fillOval(x + (height - (balWidth + 6)), y + (height - balWidth - 6), balWidth, balWidth);
+	}
+
+	private void DrawBalMiddle(Graphics g, int x, int y, int width, int balWidth){
+		g.fillOval(x + width + ((width / 2) - (balWidth / 2)), y + (width) + (width / 2) - (balWidth / 2), balWidth, balWidth);
 	}
 }
