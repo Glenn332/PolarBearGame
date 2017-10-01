@@ -3,6 +3,7 @@ package panels;
 import extensions.ColorExtension;
 import extensions.StringExtension;
 import helpers.AlertHelper;
+import helpers.GridBagHelper;
 import logic.Calculation;
 import models.AnswerModel;
 
@@ -14,165 +15,117 @@ import java.awt.event.ActionListener;
 public class ControlPanel extends JPanel implements ActionListener
 {
 	private String oldDiceTextValue;
-	private JButton BtnThrow, BtnCheck;
-	private JTextField diceTextField, penguinTextField, polarBearTextField, wakkenTextField;
+	private JButton BtnThrow;
+	public JButton BtnCheck;
+	private JTextField diceTextField, penguinTextField, polarBearTextField, iceHolesTextField;
 	private MainPanel mainPanel;
 	public ControlPanel(MainPanel panel){
 		mainPanel = panel;
-		this.setBackground(ColorExtension.MY_INDIGO());
+		this.setBackground(ColorExtension.MY_INDIGO_2());
 		this.setLayout(new GridBagLayout());
 
 		diceTextField = new JTextField(2);
 		penguinTextField = new JTextField(2);
 		polarBearTextField = new JTextField(2);
-		wakkenTextField = new JTextField(2);
+		iceHolesTextField = new JTextField(2);
 
 		JLabel diceLabel = new JLabel("Amount of dices");
 		JLabel penguinLabel = new JLabel("Penguins");
 		JLabel polarBearLabel = new JLabel("Polar Bears");
-		JLabel wakkenLabel = new JLabel("Wakken");
+		JLabel iceHolesLabel = new JLabel("Ice Holes");
 
 		BtnThrow = new JButton("Throw");
 		BtnThrow.addActionListener(this);
 
 		BtnCheck = new JButton("Check");
 		BtnCheck.addActionListener(this);
+		BtnCheck.setEnabled(false);
 
-		GridBagConstraints gbc = new GridBagConstraints();
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbc.insets = new Insets(10, 10, 10, 10);
-		gbc.gridx = 0;
-		gbc.gridy = 0;
-		gbc.gridwidth = 1;
-		add(wakkenLabel, gbc);
-
-		gbc = new GridBagConstraints();
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbc.insets = new Insets(10, 10, 10, 10);
-		gbc.gridx = 1;
-		gbc.gridy = 0;
-		gbc.gridwidth = 1;
-		add(wakkenTextField, gbc);
-
-		gbc = new GridBagConstraints();
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbc.insets = new Insets(10, 10, 10, 10);
-		gbc.gridx = 2;
-		gbc.gridy = 0;
-		gbc.gridwidth = 1;
-		add(polarBearLabel, gbc);
-
-		gbc = new GridBagConstraints();
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbc.insets = new Insets(10, 10, 10, 10);
-		gbc.gridx = 3;
-		gbc.gridy = 0;
-		gbc.gridwidth = 1;
-		add(polarBearTextField, gbc);
-
-		gbc = new GridBagConstraints();
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbc.insets = new Insets(10, 10, 10, 10);
-		gbc.gridx = 4;
-		gbc.gridy = 0;
-		gbc.gridwidth = 1;
-		add(penguinLabel, gbc);
-
-		gbc = new GridBagConstraints();
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbc.insets = new Insets(10, 10, 10, 10);
-		gbc.gridx = 5;
-		gbc.gridy = 0;
-		gbc.gridwidth = 1;
-		add(penguinTextField, gbc);
-
-		gbc = new GridBagConstraints();
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbc.insets = new Insets(10, 10, 10, 10);
-		gbc.gridx = 6;
-		gbc.gridy = 0;
-		gbc.gridwidth = 1;
-		add(BtnCheck, gbc);
-
-		gbc = new GridBagConstraints();
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbc.insets = new Insets(10, 10, 10, 10);
-		gbc.gridx = 7;
-		gbc.gridy = 0;
-		gbc.gridwidth = 1;
-		add(diceLabel, gbc);
-
-		gbc = new GridBagConstraints();
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbc.insets = new Insets(10, 10, 10, 10);
-		gbc.gridx = 8;
-		gbc.gridy = 0;
-		gbc.gridwidth = 1;
-		add(diceTextField, gbc);
-
-		gbc = new GridBagConstraints();
-		gbc.weightx = 1;
-		gbc.weighty = 1;
-		gbc.insets = new Insets(10, 10, 10, 10);
-		gbc.gridx = 9;
-		gbc.gridy = 0;
-		gbc.gridwidth = 1;
-		add(BtnThrow, gbc);
+		add(iceHolesLabel, GridBagHelper.CreateGridBagConstraints(0, 0, 1, 1, GridBagConstraints.NONE));
+		add(iceHolesTextField, GridBagHelper.CreateGridBagConstraints(1, 0, 1, 1, GridBagConstraints.HORIZONTAL));
+		add(polarBearLabel, GridBagHelper.CreateGridBagConstraints(2, 0, 1, 1, GridBagConstraints.NONE));
+		add(polarBearTextField, GridBagHelper.CreateGridBagConstraints(3, 0, 1, 1, GridBagConstraints.HORIZONTAL));
+		add(penguinLabel, GridBagHelper.CreateGridBagConstraints(4, 0, 1, 1, GridBagConstraints.NONE));
+		add(penguinTextField, GridBagHelper.CreateGridBagConstraints(5, 0, 1, 1, GridBagConstraints.HORIZONTAL));
+		add(BtnCheck, GridBagHelper.CreateGridBagConstraints(6, 0, 1, 1, GridBagConstraints.HORIZONTAL));
+		add(diceLabel, GridBagHelper.CreateGridBagConstraints(7, 0, 1, 1, GridBagConstraints.NONE));
+		add(diceTextField, GridBagHelper.CreateGridBagConstraints(8, 0, 1, 1, GridBagConstraints.HORIZONTAL));
+		add(BtnThrow, GridBagHelper.CreateGridBagConstraints(9, 0, 1, 1, GridBagConstraints.HORIZONTAL));
 	}
 
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == BtnThrow){
 			if(diceTextField.getText() != oldDiceTextValue){
-				AddOrRemoveDices();
+				if(!AddOrRemoveDices())
+					return;
 			}
+			mainPanel.resultPanel.AddTimesThrown();
 			mainPanel.dicePanel.ThrowDices();
 			mainPanel.dicePanel.repaint();
+			BtnCheck.setEnabled(true);
+			mainPanel.resultPanel.ResetSolution();
+			ResetGuessTextFields();
 		}
 		else if(e.getSource() == BtnCheck){
+			if(mainPanel.dicePanel.dices.size() == 0){
+				AlertHelper.ShowWarning("Throw dices first", "Warning");
+				return;
+			}
 			HandleAnswers();
 		}
 	}
 
+	private void ResetGuessTextFields(){
+		iceHolesTextField.setText("");
+		iceHolesTextField.setBackground(Color.WHITE);
+		polarBearTextField.setText("");
+		polarBearTextField.setBackground(Color.WHITE);
+		penguinTextField.setText("");
+		penguinTextField.setBackground(Color.WHITE);
+	}
+
 	private void HandleAnswers(){
-		if(!StringExtension.isNumeric(wakkenTextField.getText()) || !StringExtension.isNumeric(polarBearTextField.getText()) || !StringExtension.isNumeric(penguinTextField.getText())){
+		if(!StringExtension.isNumeric(iceHolesTextField.getText()) || !StringExtension.isNumeric(polarBearTextField.getText()) || !StringExtension.isNumeric(penguinTextField.getText())){
 			AlertHelper.ShowWarning("One of the answer inputs is not numerical", "Warning");
 			return;
 		}
 
-		int totalWakken = StringExtension.GetNumericValue(wakkenTextField.getText()),
+		int totalIceHoles = StringExtension.GetNumericValue(iceHolesTextField.getText()),
 				totalPolarBears = StringExtension.GetNumericValue(polarBearTextField.getText()),
 				totalPenguins = StringExtension.GetNumericValue(penguinTextField.getText());
 
-		AnswerModel answers = Calculation.GetAnswers(mainPanel.dicePanel.dices);
-
-		CheckAnswers(answers, totalWakken, totalPolarBears, totalPenguins);
-
+		CheckAnswers(Calculation.GetAnswers(mainPanel.dicePanel.dices), totalIceHoles, totalPolarBears, totalPenguins);
+		BtnCheck.setEnabled(false);
 	}
 
-	private void CheckAnswers(AnswerModel answers, int wakken, int polarBears, int penguins){
-		if(answers.TotalWakken == wakken)
-			ChangeJTextField(wakkenTextField, true);
-		else
-			ChangeJTextField(wakkenTextField, false);
+	private void CheckAnswers(AnswerModel answers, int iceHoles, int polarBears, int penguins){
+		boolean iceHolesRight = answers.TotalIceHoles == iceHoles;
+		boolean polarBearsRight = answers.TotalPolarBears == polarBears;
+		boolean penguinsRight = answers.TotalPenguins == penguins;
 
-		if(answers.TotalPolarBears == polarBears)
+		if(iceHolesRight)
+			ChangeJTextField(iceHolesTextField, true);
+		else
+			ChangeJTextField(iceHolesTextField, false);
+
+		if(polarBearsRight)
 			ChangeJTextField(polarBearTextField, true);
 		else
 			ChangeJTextField(polarBearTextField, false);
 
-		if(answers.TotalPenguins == penguins)
+		if(penguinsRight)
 			ChangeJTextField(penguinTextField, true);
 		else
 			ChangeJTextField(penguinTextField, false);
+
+		UpdateCounter(iceHolesRight, polarBearsRight, penguinsRight);
+	}
+
+	private void UpdateCounter(boolean iceHolesRight, boolean polarBearsRight, boolean penguinsRight) {
+		if(iceHolesRight && polarBearsRight && penguinsRight)
+			mainPanel.resultPanel.AddTimesGuessedRight();
+		else
+			mainPanel.resultPanel.AddTimesGuessedWrong();
 	}
 
 	private void ChangeJTextField(JTextField textField, boolean isRight){
@@ -182,18 +135,19 @@ public class ControlPanel extends JPanel implements ActionListener
 			textField.setBackground(ColorExtension.MY_WRONG_ANSWER());
 	}
 
-	private void AddOrRemoveDices(){
+	private boolean AddOrRemoveDices(){
 		if(!StringExtension.isNumeric(diceTextField.getText())){
 			AlertHelper.ShowWarning("'Amount of dices' value is not numeric", "Warning");
-			return;
+			return false;
 		}
 		int number = StringExtension.GetNumericValue(diceTextField.getText());
 		if(number < 1 || number > 12) {
 			AlertHelper.ShowWarning("'Amount of dices' value needs to be higher than 0 and lower than 13", "Warning");
-			return;
+			return false;
 		}
 
 		mainPanel.dicePanel.CreateDices(number);
 		oldDiceTextValue = diceTextField.getText();
+		return true;
 	}
 }

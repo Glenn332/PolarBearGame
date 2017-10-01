@@ -14,7 +14,7 @@ public class DicePanel extends JPanel
 {
 	public List<Dice> dices = new ArrayList<>();
 	public DicePanel (){
-		this.setBackground(ColorExtension.MY_RED());
+		this.setBackground(ColorExtension.MY_INDIGO_2());
 	}
 	
 	private void addDice(){

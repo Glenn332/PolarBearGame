@@ -1,5 +1,8 @@
 package panels;
 
+import extensions.ColorExtension;
+import helpers.GridBagHelper;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,33 +10,20 @@ import java.awt.event.ActionListener;
 
 public class MainPanel extends JPanel {
     public DicePanel dicePanel;
-    private ControlPanel controlPanel;
+    public ControlPanel controlPanel;
+    public ResultPanel resultPanel;
 
     public MainPanel() {
         this.setLayout(new GridBagLayout());
+        this.setBackground(ColorExtension.MY_INDIGO());
 
 
         dicePanel = new DicePanel();
         controlPanel = new ControlPanel(this);
+        resultPanel = new ResultPanel(this);
 
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.weightx = 4;
-        gbc.weighty = 1;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(10, 10, 10, 10);
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.gridwidth = 4;
-        add(dicePanel, gbc);
-        
-        gbc = new GridBagConstraints();
-        gbc.weightx = 1;
-        gbc.weighty = 1;
-        gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(10, 10, 10, 10);
-        gbc.gridx = 0;
-        gbc.gridy = 2;
-        gbc.gridwidth = 1;
-        add(controlPanel, gbc);
+        add(dicePanel, GridBagHelper.CreateGridBagConstraints(0, 0, 1, 3, GridBagConstraints.BOTH));
+        add(controlPanel, GridBagHelper.CreateGridBagConstraints(0, 3, 1, 1, GridBagConstraints.BOTH));
+        add(resultPanel, GridBagHelper.CreateGridBagConstraints(0, 4, 1, 1, GridBagConstraints.BOTH));
     }
 }
