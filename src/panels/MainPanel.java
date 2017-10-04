@@ -12,6 +12,7 @@ public class MainPanel extends JPanel {
     public DicePanel dicePanel;
     public ControlPanel controlPanel;
     public ResultPanel resultPanel;
+    public HintPanel hintPanel;
 
     public MainPanel() {
         this.setLayout(new GridBagLayout());
@@ -21,9 +22,11 @@ public class MainPanel extends JPanel {
         dicePanel = new DicePanel();
         controlPanel = new ControlPanel(this);
         resultPanel = new ResultPanel(this);
+        hintPanel = new HintPanel();
 
-        add(dicePanel, GridBagHelper.CreateGridBagConstraints(0, 0, 1, 3, GridBagConstraints.BOTH));
-        add(controlPanel, GridBagHelper.CreateGridBagConstraints(0, 3, 1, 1, GridBagConstraints.BOTH));
-        add(resultPanel, GridBagHelper.CreateGridBagConstraints(0, 4, 1, 1, GridBagConstraints.BOTH));
+        add(dicePanel, GridBagHelper.CreateGridBagConstraints(0, 0, 2, 3, GridBagConstraints.BOTH));
+        add(controlPanel, GridBagHelper.CreateGridBagConstraints(0, 3, 2, 0.2, GridBagConstraints.BOTH));
+        add(hintPanel, GridBagHelper.CreateGridBagConstraints(0, 4, 1, 1, GridBagConstraints.BOTH));
+        add(resultPanel, GridBagHelper.CreateGridBagConstraints(1, 4, 1, 1, GridBagConstraints.BOTH));
     }
 }

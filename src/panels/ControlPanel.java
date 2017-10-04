@@ -1,5 +1,6 @@
 package panels;
 
+import constants.Resources;
 import extensions.ColorExtension;
 import extensions.StringExtension;
 import helpers.AlertHelper;
@@ -29,15 +30,15 @@ public class ControlPanel extends JPanel implements ActionListener
 		polarBearTextField = new JTextField(2);
 		iceHolesTextField = new JTextField(2);
 
-		JLabel diceLabel = new JLabel("Amount of dices");
-		JLabel penguinLabel = new JLabel("Penguins");
-		JLabel polarBearLabel = new JLabel("Polar Bears");
-		JLabel iceHolesLabel = new JLabel("Ice Holes");
+		JLabel diceLabel = new JLabel(Resources.amount_of_dices);
+		JLabel penguinLabel = new JLabel(Resources.lbl_penguins);
+		JLabel polarBearLabel = new JLabel(Resources.lbl_polar_bears);
+		JLabel iceHolesLabel = new JLabel(Resources.lbl_ice_holes);
 
-		BtnThrow = new JButton("Throw");
+		BtnThrow = new JButton(Resources.btn_throw);
 		BtnThrow.addActionListener(this);
 
-		BtnCheck = new JButton("Check");
+		BtnCheck = new JButton(Resources.btn_check);
 		BtnCheck.addActionListener(this);
 		BtnCheck.setEnabled(false);
 
@@ -68,13 +69,16 @@ public class ControlPanel extends JPanel implements ActionListener
 		}
 		else if(e.getSource() == BtnCheck){
 			if(mainPanel.dicePanel.dices.size() == 0){
-				AlertHelper.ShowWarning("Throw dices first", "Warning");
+				AlertHelper.ShowWarning(Resources.msg_throw_dice_first, Resources.lbl_warning);
 				return;
 			}
 			HandleAnswers();
 		}
 	}
 
+	/**
+	 * ResetGuessTextFields will reset all the TextFields in which you can guess the answer for the current thrown dices.
+	 */
 	private void ResetGuessTextFields(){
 		iceHolesTextField.setText("");
 		iceHolesTextField.setBackground(Color.WHITE);
@@ -84,9 +88,12 @@ public class ControlPanel extends JPanel implements ActionListener
 		penguinTextField.setBackground(Color.WHITE);
 	}
 
+	/**
+	 * HandleAnswers will be called when you press check and will process your answers and it will handle all calls to external methods to handle your answers.
+	 */
 	private void HandleAnswers(){
-		if(!StringExtension.isNumeric(iceHolesTextField.getText()) || !StringExtension.isNumeric(polarBearTextField.getText()) || !StringExtension.isNumeric(penguinTextField.getText())){
-			AlertHelper.ShowWarning("One of the answer inputs is not numerical", "Warning");
+		if(!StringExtension.IsNumeric(iceHolesTextField.getText()) || !StringExtension.IsNumeric(polarBearTextField.getText()) || !StringExtension.IsNumeric(penguinTextField.getText())){
+			AlertHelper.ShowWarning(Resources.msg_answer_not_numerical, Resources.lbl_warning);
 			return;
 		}
 
@@ -98,6 +105,9 @@ public class ControlPanel extends JPanel implements ActionListener
 		BtnCheck.setEnabled(false);
 	}
 
+	/**
+	 * CheckAnswers will check your answers with the help of the AnswerModel which will contain all of the current answers of the thrown dice.
+	 */
 	private void CheckAnswers(AnswerModel answers, int iceHoles, int polarBears, int penguins){
 		boolean iceHolesRight = answers.TotalIceHoles == iceHoles;
 		boolean polarBearsRight = answers.TotalPolarBears == polarBears;
@@ -121,6 +131,9 @@ public class ControlPanel extends JPanel implements ActionListener
 		UpdateCounter(iceHolesRight, polarBearsRight, penguinsRight);
 	}
 
+	/**
+	 * UpdateCounter will update the resultPanel counters where we want to either add one to the guessedRight or guessedWrong depending on the outcome of CheckAnswers.
+	 */
 	private void UpdateCounter(boolean iceHolesRight, boolean polarBearsRight, boolean penguinsRight) {
 		if(iceHolesRight && polarBearsRight && penguinsRight)
 			mainPanel.resultPanel.AddTimesGuessedRight();
@@ -128,6 +141,9 @@ public class ControlPanel extends JPanel implements ActionListener
 			mainPanel.resultPanel.AddTimesGuessedWrong();
 	}
 
+	/**
+	 * ChangeJTextField will change the color of the background for each answer TextField depending on whether the answer that is filled within is right or wrong.
+	 */
 	private void ChangeJTextField(JTextField textField, boolean isRight){
 		if(isRight)
 			textField.setBackground(ColorExtension.MY_RIGHT_ANSWER());
@@ -135,14 +151,18 @@ public class ControlPanel extends JPanel implements ActionListener
 			textField.setBackground(ColorExtension.MY_WRONG_ANSWER());
 	}
 
+	/**
+	 * AddOrRemoveDices will be called when the diceTextField has changed its value and it will recreate the dice list on the dicePanel
+	 * with an amount of instances we have supplied in the textfield.
+	 */
 	private boolean AddOrRemoveDices(){
-		if(!StringExtension.isNumeric(diceTextField.getText())){
-			AlertHelper.ShowWarning("'Amount of dices' value is not numeric", "Warning");
+		if(!StringExtension.IsNumeric(diceTextField.getText())){
+			AlertHelper.ShowWarning(Resources.msg_dices_not_numerical, Resources.lbl_warning);
 			return false;
 		}
 		int number = StringExtension.GetNumericValue(diceTextField.getText());
 		if(number < 1 || number > 12) {
-			AlertHelper.ShowWarning("'Amount of dices' value needs to be higher than 0 and lower than 13", "Warning");
+			AlertHelper.ShowWarning(Resources.msg_dice_value, Resources.lbl_warning);
 			return false;
 		}
 

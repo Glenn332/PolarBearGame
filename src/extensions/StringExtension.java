@@ -6,9 +6,9 @@ public class StringExtension {
      * returns true if the given string is of numeric value.
      * @param string the string value to check if it is an numeric value.
      */
-    public static boolean isNumeric(String string){
+    public static boolean IsNumeric(String string){
         try{
-            int i = Integer.parseInt(string);
+            Integer.parseInt(string);
         } catch (NumberFormatException e){
             return false;
         }

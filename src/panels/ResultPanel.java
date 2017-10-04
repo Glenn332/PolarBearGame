@@ -1,5 +1,6 @@
 package panels;
 
+import constants.Resources;
 import extensions.ColorExtension;
 import helpers.AlertHelper;
 import helpers.GridBagHelper;
@@ -21,9 +22,9 @@ public class ResultPanel extends JPanel implements ActionListener {
         this.setBackground(ColorExtension.MY_INDIGO_2());
         this.setLayout(new GridBagLayout());
 
-        btnSolution = new JButton("Solution");
+        btnSolution = new JButton(Resources.btn_solution);
         btnSolution.addActionListener(this);
-        btnReset = new JButton("Reset");
+        btnReset = new JButton(Resources.btn_reset);
         btnReset.addActionListener(this);
 
         penguinTextField = new JTextField(2);
@@ -36,12 +37,12 @@ public class ResultPanel extends JPanel implements ActionListener {
         timesGuessedRightTextField = new JTextField(2);
         timesGuessedRightTextField.setEnabled(false);
 
-        JLabel penguinLabel = new JLabel("Penguins");
-        JLabel polarBearLabel = new JLabel("Polar Bears");
-        JLabel iceHolesLabel = new JLabel("Ice Holes");
-        JLabel timesThrownLabel = new JLabel("Number of times thrown");
-        JLabel timesGuessedWrongLabel = new JLabel("Number of times guessed wrong");
-        JLabel timesGuessedRightLabel = new JLabel("Number of times guessed right");
+        JLabel penguinLabel = new JLabel(Resources.lbl_penguins);
+        JLabel polarBearLabel = new JLabel(Resources.lbl_polar_bears);
+        JLabel iceHolesLabel = new JLabel(Resources.lbl_ice_holes);
+        JLabel timesThrownLabel = new JLabel(Resources.times_thrown);
+        JLabel timesGuessedWrongLabel = new JLabel(Resources.times_guessed_wrong);
+        JLabel timesGuessedRightLabel = new JLabel(Resources.times_guessed_right);
 
         add(btnSolution, GridBagHelper.CreateGridBagConstraints(0, 0, 3, 1, GridBagConstraints.HORIZONTAL));
         add(btnReset, GridBagHelper.CreateGridBagConstraints(3, 0, 3, 1, GridBagConstraints.HORIZONTAL));
@@ -72,9 +73,12 @@ public class ResultPanel extends JPanel implements ActionListener {
         }
     }
 
+    /**
+     * HandleSolution will try and give you the solution of the current thrown dices.
+     */
     private void HandleSolution(){
         if(mainPanel.dicePanel.dices.size() == 0){
-            AlertHelper.ShowWarning("Throw dices first", "Warning");
+            AlertHelper.ShowWarning(Resources.msg_throw_dice_first, Resources.lbl_warning);
             return;
         }
         AnswerModel answers = Calculation.GetAnswers(mainPanel.dicePanel.dices);
@@ -84,33 +88,53 @@ public class ResultPanel extends JPanel implements ActionListener {
         mainPanel.controlPanel.BtnCheck.setEnabled(false);
     }
 
+    /**
+     * UpdateCounterTextFields will update the textfields with information of how many times you have thrown, times you have guessed the answer wrong and right.
+     */
     private void UpdateCounterTextFields(){
         timesGuessedRightTextField.setText(Integer.toString(timesGuessedRight));
         timesGuessedWrongTextField.setText(Integer.toString(timesGuessedWrong));
         timesThrownTextField.setText(Integer.toString(timesThrown));
     }
 
+    /**
+     * ResetSolution will reset the TextFields currently showing the solution.
+     */
     public void ResetSolution(){
         iceHolesTextField.setText("");
         polarBearTextField.setText("");
         penguinTextField.setText("");
     }
 
+    /**
+     * AddTimesThrown will add one by the timesThrown public integer and it will all the methods to update the TextFields.
+     * It will also send a signal to the hintPanel to check whether its time to show the next hint.
+     */
     public void AddTimesThrown(){
         timesThrown++;
         UpdateCounterTextFields();
+        mainPanel.hintPanel.HandleHints(timesThrown);
     }
 
+    /**
+     * AddTimesGuessedWrong will add one by the timesGuessedWrong public integer and it will all the methods to update the TextFields.
+     */
     public void AddTimesGuessedWrong(){
         timesGuessedWrong++;
         UpdateCounterTextFields();
     }
 
+    /**
+     * AddTimesGuessedRight will add one by the timesGuessedRight public integer and it will all the methods to update the TextFields.
+     */
     public void AddTimesGuessedRight(){
         timesGuessedRight++;
         UpdateCounterTextFields();
     }
 
+    /**
+     * ResetCounters will reset all the public integers which keeps the stats of the game basically resetting the game entirely.
+     */
     public void ResetCounters(){
         timesGuessedRight = 0;
         timesGuessedWrong = 0;
