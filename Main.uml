@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>frames.MainFrame</OriginalElement>
+  <nodes>
+    <node x="390.0" y="564.0">helpers.AlertHelper</node>
+    <node x="1600.9680180476325" y="1112.0">frames.MainFrame</node>
+    <node x="1116.0791291587434" y="564.0">javax.swing.TransferHandler.HasGetTransferHandler</node>
+    <node x="1708.3013513809658" y="398.0">java.awt.image.ImageObserver</node>
+    <node x="1352.0791291587434" y="398.0">logic.Dice</node>
+    <node x="21.5" y="564.0">extensions.StringExtension</node>
+    <node x="693.5041291587436" y="860.0">panels.ResultPanel</node>
+    <node x="548.0" y="564.0">helpers.GridBagHelper</node>
+    <node x="1535.3013513809658" y="398.0">java.awt.Container</node>
+    <node x="1614.9680180476325" y="1016.0">javax.swing.JFrame</node>
+    <node x="731.2541291587434" y="1016.0">panels.MainPanel</node>
+    <node x="1955.5870656666802" y="106.0">java.awt.Frame</node>
+    <node x="236.3372260657302" y="398.0">models.AnswerModel</node>
+    <node x="1941.3013513809658" y="252.0">java.awt.Window</node>
+    <node x="234.0" y="564.0">logic.Calculation</node>
+    <node x="1678.9680180476325" y="860.0">javax.swing.RootPaneContainer</node>
+    <node x="2000.1703990000137" y="0.0">java.awt.MenuContainer</node>
+    <node x="1427.0594482879524" y="106.0">javax.accessibility.Accessible</node>
+    <node x="284.18358375139996" y="860.0">panels.ControlPanel</node>
+    <node x="1329.888423453494" y="860.0">panels.DicePanel</node>
+    <node x="1648.5594482879526" y="564.0">java.awt.Component</node>
+    <node x="1268.4030442947505" y="0.0">java.io.Serializable</node>
+    <node x="740.0" y="564.0">constants.Resources</node>
+    <node x="935.0791291587435" y="564.0">extensions.ColorExtension</node>
+    <node x="885.7657974943018" y="860.0">panels.HintPanel</node>
+    <node x="2163.7835386576053" y="860.0">javax.swing.WindowConstants</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="panels.ResultPanel" target="java.awt.Container">
+      <point x="34.25" y="-18.0" />
+      <point x="796.2541291587436" y="770.0" />
+      <point x="902.5791291587435" y="770.0" />
+      <point x="902.5791291587435" y="504.0" />
+      <point x="1556.134684714299" y="504.0" />
+      <point x="-41.66666666666674" y="18.0" />
+    </edge>
+    <edge source="panels.ResultPanel" target="logic.Calculation">
+      <point x="-61.64999999999998" y="-18.0" />
+      <point x="700.3541291587436" y="720.0" />
+      <point x="335.25" y="720.0" />
+      <point x="33.75" y="18.0" />
+    </edge>
+    <edge source="panels.ResultPanel" target="helpers.GridBagHelper">
+      <point x="-34.25" y="-18.0" />
+      <point x="727.7541291587436" y="700.0" />
+      <point x="648.0" y="700.0" />
+      <point x="20.0" y="18.0" />
+    </edge>
+    <edge source="panels.DicePanel" target="logic.Dice">
+      <point x="7.9375" y="-18.0" />
+      <point x="1401.325923453494" y="840.0" />
+      <point x="1403.3603791587434" y="840.0" />
+      <point x="1403.3603791587434" y="484.0" />
+      <point x="1408.9541291587434" y="484.0" />
+      <point x="11.375" y="18.0" />
+    </edge>
+    <edge source="panels.MainPanel" target="javax.swing.TransferHandler.HasGetTransferHandler">
+      <point x="32.5" y="-18.0" />
+      <point x="828.7541291587434" y="956.0" />
+      <point x="1241.4957958254104" y="956.0" />
+      <point x="17.916666666666742" y="18.0" />
+    </edge>
+    <edge source="java.awt.Component" target="java.awt.image.ImageObserver">
+      <point x="9.266666666666652" y="-18.0" />
+      <point x="1727.3261149546192" y="484.0" />
+      <point x="1748.8013513809658" y="484.0" />
+      <point x="-40.5" y="18.0" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="javax.swing.JFrame">
+      <point x="-35.666666666666686" y="18.0" />
+      <point x="1632.8013513809658" y="1072.0" />
+      <point x="1594.9680180476325" y="1072.0" />
+      <point x="1594.9680180476325" y="1034.0" />
+      <point x="-53.5" y="-0.0" />
+    </edge>
+    <edge source="panels.ControlPanel" target="javax.swing.TransferHandler.HasGetTransferHandler">
+      <point x="66.36363636363637" y="-18.0" />
+      <point x="423.54722011503634" y="820.0" />
+      <point x="1133.9957958254104" y="820.0" />
+      <point x="-89.58333333333326" y="18.0" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="java.awt.Component">
+      <point x="0.0" y="-18.0" />
+      <point x="1668.4680180476325" y="840.0" />
+      <point x="1718.0594482879526" y="840.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="java.awt.Frame" target="java.awt.Window">
+      <point x="14.571428571428669" y="18.0" />
+      <point x="2021.1584942381087" y="232.0" />
+      <point x="2028.3013513809658" y="232.0" />
+      <point x="29.0" y="-18.0" />
+    </edge>
+    <edge source="panels.ControlPanel" target="java.io.Serializable">
+      <point x="-66.36363636363637" y="-18.0" />
+      <point x="290.8199473877636" y="840.0" />
+      <point x="11.0" y="840.0" />
+      <point x="11.0" y="66.0" />
+      <point x="1291.4030442947505" y="66.0" />
+      <point x="-46.0" y="18.0" />
+    </edge>
+    <edge source="java.awt.Window" target="java.awt.Component">
+      <point x="42.181818181818244" y="18.0" />
+      <point x="2041.483169562784" y="378.0" />
+      <point x="2040.204381683996" y="378.0" />
+      <point x="2040.204381683996" y="534.0" />
+      <point x="1773.6594482879525" y="534.0" />
+      <point x="55.59999999999991" y="-18.0" />
+    </edge>
+    <edge source="java.awt.Frame" target="java.awt.MenuContainer">
+      <point x="25.500000000000227" y="-18.0" />
+      <point x="2032.0870656666802" y="86.0" />
+      <point x="2040.6703990000137" y="86.0" />
+      <point x="-40.5" y="18.0" />
+    </edge>
+    <edge source="logic.Calculation" target="models.AnswerModel">
+      <point x="-45.0" y="-18.0" />
+      <point x="256.5" y="544.0" />
+      <point x="293.3372260657302" y="544.0" />
+      <point x="-19.0" y="18.0" />
+    </edge>
+    <edge source="panels.ControlPanel" target="extensions.StringExtension">
+      <point x="-53.09090909090912" y="-18.0" />
+      <point x="304.09267466049084" y="830.0" />
+      <point x="103.0" y="830.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="javax.accessibility.Accessible">
+      <point x="-30.57142857142867" y="-18.0" />
+      <point x="1637.8965894762036" y="986.0" />
+      <point x="1504.8013513809658" y="986.0" />
+      <point x="1504.8013513809658" y="232.0" />
+      <point x="1506.5038927323967" y="232.0" />
+      <point x="14.444444444444343" y="18.0" />
+    </edge>
+    <edge source="java.awt.Container" target="java.io.Serializable">
+      <point x="-25.0" y="-18.0" />
+      <point x="1572.8013513809658" y="378.0" />
+      <point x="1571.4205593990637" y="378.0" />
+      <point x="1571.4205593990637" y="86.0" />
+      <point x="1352.7363776280838" y="86.0" />
+      <point x="15.333333333333258" y="18.0" />
+    </edge>
+    <edge source="java.awt.Window" target="javax.accessibility.Accessible">
+      <point x="-48.33333333333326" y="-18.0" />
+      <point x="1950.9680180476325" y="212.0" />
+      <point x="1549.8372260657302" y="212.0" />
+      <point x="57.77777777777783" y="18.0" />
+    </edge>
+    <edge source="frames.MainFrame" target="javax.swing.JFrame">
+      <point x="0.0" y="-18.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="panels.ResultPanel" target="constants.Resources">
+      <point x="6.850000000000023" y="-18.0" />
+      <point x="768.8541291587436" y="750.0" />
+      <point x="803.5" y="750.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="panels.ControlPanel" target="helpers.GridBagHelper">
+      <point x="26.54545454545456" y="-18.0" />
+      <point x="383.72903829685447" y="750.0" />
+      <point x="568.0" y="750.0" />
+      <point x="-60.0" y="18.0" />
+    </edge>
+    <edge source="java.awt.Component" target="javax.accessibility.Accessible">
+      <point x="0.0" y="-18.0" />
+      <point x="1718.0594482879526" y="474.0" />
+      <point x="1697.8013513809658" y="474.0" />
+      <point x="1697.8013513809658" y="222.0" />
+      <point x="1535.3927816212858" y="222.0" />
+      <point x="43.33333333333326" y="18.0" />
+    </edge>
+    <edge source="panels.DicePanel" target="javax.accessibility.Accessible">
+      <point x="39.6875" y="-18.0" />
+      <point x="1433.075923453494" y="830.0" />
+      <point x="1453.5791291587434" y="830.0" />
+      <point x="1453.5791291587434" y="222.0" />
+      <point x="1477.615003843508" y="222.0" />
+      <point x="-14.444444444444343" y="18.0" />
+    </edge>
+    <edge source="java.awt.Component" target="java.awt.Component">
+      <point x="-46.333333333333314" y="18.0" />
+      <point x="1671.7261149546193" y="620.0" />
+      <point x="1628.5594482879526" y="620.0" />
+      <point x="1628.5594482879526" y="582.0" />
+      <point x="-69.5" y="-0.0" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="java.awt.Container">
+      <point x="-15.28571428571422" y="-18.0" />
+      <point x="1653.1823037619183" y="976.0" />
+      <point x="1568.7525862766527" y="976.0" />
+      <point x="1568.7525862766527" y="544.0" />
+      <point x="1589.4680180476325" y="544.0" />
+      <point x="-8.333333333333258" y="18.0" />
+    </edge>
+    <edge source="panels.MainPanel" target="javax.accessibility.Accessible">
+      <point x="54.16666666666663" y="-18.0" />
+      <point x="850.4207958254101" y="986.0" />
+      <point x="1475.5791291587434" y="986.0" />
+      <point x="1475.5791291587434" y="232.0" />
+      <point x="1492.0594482879524" y="232.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="java.awt.Component" target="java.io.Serializable">
+      <point x="27.799999999999955" y="-18.0" />
+      <point x="1745.8594482879525" y="504.0" />
+      <point x="1880.8013513809658" y="504.0" />
+      <point x="1880.8013513809658" y="76.0" />
+      <point x="1368.0697109614173" y="76.0" />
+      <point x="30.666666666666742" y="18.0" />
+    </edge>
+    <edge source="panels.DicePanel" target="java.awt.Container">
+      <point x="55.5625" y="-18.0" />
+      <point x="1448.950923453494" y="840.0" />
+      <point x="1464.5791291587434" y="840.0" />
+      <point x="1464.5791291587434" y="524.0" />
+      <point x="1572.8013513809658" y="524.0" />
+      <point x="-25.0" y="18.0" />
+    </edge>
+    <edge source="panels.ControlPanel" target="helpers.AlertHelper">
+      <point x="13.272727272727252" y="-18.0" />
+      <point x="370.4563110241272" y="740.0" />
+      <point x="424.5" y="740.0" />
+      <point x="-34.5" y="18.0" />
+    </edge>
+    <edge source="panels.MainPanel" target="java.io.Serializable">
+      <point x="-61.388888888888914" y="-18.0" />
+      <point x="734.8652402698544" y="996.0" />
+      <point x="0.0" y="996.0" />
+      <point x="0.0" y="56.0" />
+      <point x="1276.0697109614173" y="56.0" />
+      <point x="-61.33333333333326" y="18.0" />
+    </edge>
+    <edge source="java.awt.Window" target="java.awt.Frame">
+      <point x="-9.666666666666742" y="-18.0" />
+      <point x="1989.634684714299" y="232.0" />
+      <point x="1992.0156370952513" y="232.0" />
+      <point x="-14.571428571428669" y="18.0" />
+    </edge>
+    <edge source="java.awt.Container" target="java.awt.Window">
+      <point x="0.0" y="-18.0" />
+      <point x="1597.8013513809658" y="358.0" />
+      <point x="1988.7558968355113" y="358.0" />
+      <point x="-10.545454545454504" y="18.0" />
+    </edge>
+    <edge source="java.awt.Window" target="java.io.Serializable">
+      <point x="-29.0" y="-18.0" />
+      <point x="1970.3013513809658" y="202.0" />
+      <point x="1904.634684714299" y="202.0" />
+      <point x="1904.634684714299" y="66.0" />
+      <point x="1383.4030442947505" y="66.0" />
+      <point x="46.0" y="18.0" />
+    </edge>
+    <edge source="panels.MainPanel" target="panels.HintPanel">
+      <point x="10.833333333333371" y="-18.0" />
+      <point x="807.0874624920768" y="926.0" />
+      <point x="917.0157974943018" y="926.0" />
+      <point x="-31.25" y="18.0" />
+    </edge>
+    <edge source="panels.ControlPanel" target="javax.accessibility.Accessible">
+      <point x="-39.81818181818187" y="-18.0" />
+      <point x="317.3654019332181" y="820.0" />
+      <point x="195.0" y="820.0" />
+      <point x="195.0" y="192.0" />
+      <point x="1434.2816705101745" y="192.0" />
+      <point x="-57.77777777777783" y="18.0" />
+    </edge>
+    <edge source="javax.swing.RootPaneContainer" target="java.awt.Component">
+      <point x="0.0" y="-18.0" />
+      <point x="1773.4680180476325" y="840.0" />
+      <point x="1764.3927816212858" y="840.0" />
+      <point x="46.33333333333326" y="18.0" />
+    </edge>
+    <edge source="panels.HintPanel" target="extensions.ColorExtension">
+      <point x="17.85714285714289" y="-18.0" />
+      <point x="966.1229403514446" y="800.0" />
+      <point x="1015.0791291587435" y="800.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="panels.ResultPanel" target="java.io.Serializable">
+      <point x="-6.850000000000023" y="-18.0" />
+      <point x="755.1541291587436" y="680.0" />
+      <point x="729.5" y="680.0" />
+      <point x="729.5" y="76.0" />
+      <point x="1306.7363776280838" y="76.0" />
+      <point x="-30.666666666666742" y="18.0" />
+    </edge>
+    <edge source="panels.HintPanel" target="javax.swing.TransferHandler.HasGetTransferHandler">
+      <point x="53.571428571428555" y="-18.0" />
+      <point x="1001.8372260657302" y="840.0" />
+      <point x="1205.6624624920769" y="840.0" />
+      <point x="-17.916666666666742" y="18.0" />
+    </edge>
+    <edge source="panels.ResultPanel" target="javax.accessibility.Accessible">
+      <point x="20.549999999999955" y="-18.0" />
+      <point x="782.5541291587435" y="760.0" />
+      <point x="891.5791291587435" y="760.0" />
+      <point x="891.5791291587435" y="202.0" />
+      <point x="1448.7261149546193" y="202.0" />
+      <point x="-43.33333333333326" y="18.0" />
+    </edge>
+    <edge source="panels.ControlPanel" target="constants.Resources">
+      <point x="39.81818181818181" y="-18.0" />
+      <point x="397.0017655695817" y="770.0" />
+      <point x="761.1666666666666" y="770.0" />
+      <point x="-42.33333333333337" y="18.0" />
+    </edge>
+    <edge source="panels.MainPanel" target="panels.ControlPanel">
+      <point x="-54.16666666666674" y="-18.0" />
+      <point x="742.0874624920766" y="986.0" />
+      <point x="302.43358375139996" y="986.0" />
+      <point x="-54.75" y="18.0" />
+    </edge>
+    <edge source="javax.swing.RootPaneContainer" target="java.awt.Container">
+      <point x="-63.0" y="-18.0" />
+      <point x="1710.4680180476325" y="830.0" />
+      <point x="1597.8013513809658" y="830.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="panels.DicePanel" target="javax.swing.TransferHandler.HasGetTransferHandler">
+      <point x="-39.6875" y="-18.0" />
+      <point x="1353.700923453494" y="790.0" />
+      <point x="1277.3291291587434" y="790.0" />
+      <point x="53.75" y="18.0" />
+    </edge>
+    <edge source="panels.ControlPanel" target="java.awt.Container">
+      <point x="0.0" y="-18.0" />
+      <point x="357.18358375139996" y="730.0" />
+      <point x="379.5" y="730.0" />
+      <point x="379.5" y="494.0" />
+      <point x="1547.8013513809658" y="494.0" />
+      <point x="-50.0" y="18.0" />
+    </edge>
+    <edge source="panels.ControlPanel" target="logic.Calculation">
+      <point x="-13.272727272727252" y="-18.0" />
+      <point x="343.9108564786727" y="800.0" />
+      <point x="267.75" y="800.0" />
+      <point x="-33.75" y="18.0" />
+    </edge>
+    <edge source="frames.MainFrame" target="panels.MainPanel">
+      <point x="-45.0" y="-18.0" />
+      <point x="1623.4680180476325" y="1092.0" />
+      <point x="796.2541291587434" y="1092.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="panels.DicePanel" target="java.io.Serializable">
+      <point x="-23.8125" y="-18.0" />
+      <point x="1369.575923453494" y="780.0" />
+      <point x="1341.5791291587434" y="780.0" />
+      <point x="1341.5791291587434" y="86.0" />
+      <point x="1337.4030442947505" y="86.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="javax.swing.RootPaneContainer">
+      <point x="15.28571428571422" y="-18.0" />
+      <point x="1683.7537323333468" y="976.0" />
+      <point x="1773.4680180476325" y="976.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="panels.MainPanel" target="helpers.GridBagHelper">
+      <point x="-25.27777777777783" y="-18.0" />
+      <point x="770.9763513809655" y="946.0" />
+      <point x="569.8199473877636" y="946.0" />
+      <point x="569.8199473877636" y="760.0" />
+      <point x="608.0" y="760.0" />
+      <point x="-20.0" y="18.0" />
+    </edge>
+    <edge source="panels.ResultPanel" target="helpers.AlertHelper">
+      <point x="-47.950000000000045" y="-18.0" />
+      <point x="714.0541291587435" y="710.0" />
+      <point x="493.5" y="710.0" />
+      <point x="34.5" y="18.0" />
+    </edge>
+    <edge source="java.awt.Component" target="java.awt.Container">
+      <point x="-55.59999999999991" y="-18.0" />
+      <point x="1662.4594482879527" y="534.0" />
+      <point x="1614.4680180476325" y="534.0" />
+      <point x="16.666666666666742" y="18.0" />
+    </edge>
+    <edge source="panels.MainPanel" target="java.awt.Container">
+      <point x="61.388888888888914" y="-18.0" />
+      <point x="857.6430180476323" y="996.0" />
+      <point x="1482.8013513809658" y="996.0" />
+      <point x="1482.8013513809658" y="534.0" />
+      <point x="1581.134684714299" y="534.0" />
+      <point x="-16.666666666666742" y="18.0" />
+    </edge>
+    <edge source="java.awt.Component" target="java.awt.Window">
+      <point x="46.33333333333326" y="-18.0" />
+      <point x="1764.3927816212858" y="524.0" />
+      <point x="2030.9377150173295" y="524.0" />
+      <point x="31.63636363636374" y="18.0" />
+    </edge>
+    <edge source="panels.ResultPanel" target="javax.swing.TransferHandler.HasGetTransferHandler">
+      <point x="61.64999999999998" y="-18.0" />
+      <point x="823.6541291587436" y="830.0" />
+      <point x="1169.8291291587434" y="830.0" />
+      <point x="-53.75" y="18.0" />
+    </edge>
+    <edge source="panels.HintPanel" target="java.awt.Container">
+      <point x="35.714285714285666" y="-18.0" />
+      <point x="983.9800832085873" y="810.0" />
+      <point x="1105.5791291587434" y="810.0" />
+      <point x="1105.5791291587434" y="514.0" />
+      <point x="1564.4680180476325" y="514.0" />
+      <point x="-33.33333333333326" y="18.0" />
+    </edge>
+    <edge source="panels.MainPanel" target="panels.ResultPanel">
+      <point x="-18.055555555555543" y="-18.0" />
+      <point x="778.1985736031879" y="936.0" />
+      <point x="710.6291291587436" y="936.0" />
+      <point x="-51.375" y="18.0" />
+    </edge>
+    <edge source="java.awt.Window" target="javax.swing.RootPaneContainer">
+      <point x="52.72727272727252" y="18.0" />
+      <point x="2052.0286241082385" y="378.0" />
+      <point x="2126.783538657605" y="378.0" />
+      <point x="2126.783538657605" y="840.0" />
+      <point x="1836.4680180476325" y="840.0" />
+      <point x="63.0" y="-18.0" />
+    </edge>
+    <edge source="panels.HintPanel" target="java.io.Serializable">
+      <point x="-17.85714285714289" y="-18.0" />
+      <point x="930.4086546371589" y="650.0" />
+      <point x="913.5791291587435" y="650.0" />
+      <point x="913.5791291587435" y="86.0" />
+      <point x="1322.0697109614173" y="86.0" />
+      <point x="-15.333333333333258" y="18.0" />
+    </edge>
+    <edge source="panels.ControlPanel" target="panels.MainPanel">
+      <point x="18.25" y="18.0" />
+      <point x="375.43358375139996" y="966.0" />
+      <point x="756.5319069365212" y="966.0" />
+      <point x="-39.72222222222217" y="-18.0" />
+    </edge>
+    <edge source="java.awt.Window" target="java.awt.Container">
+      <point x="0.0" y="18.0" />
+      <point x="1999.3013513809658" y="368.0" />
+      <point x="1622.8013513809658" y="368.0" />
+      <point x="25.0" y="-18.0" />
+    </edge>
+    <edge source="logic.Calculation" target="logic.Dice">
+      <point x="45.0" y="-18.0" />
+      <point x="346.5" y="484.0" />
+      <point x="1363.4541291587434" y="484.0" />
+      <point x="-34.125" y="18.0" />
+    </edge>
+    <edge source="java.awt.Component" target="java.awt.MenuContainer">
+      <point x="64.86666666666679" y="-18.0" />
+      <point x="1782.9261149546194" y="544.0" />
+      <point x="2100.2180180476325" y="544.0" />
+      <point x="2100.2180180476325" y="86.0" />
+      <point x="2121.6703990000137" y="86.0" />
+      <point x="40.5" y="18.0" />
+    </edge>
+    <edge source="panels.HintPanel" target="helpers.GridBagHelper">
+      <point x="-53.571428571428555" y="-18.0" />
+      <point x="894.6943689228731" y="670.0" />
+      <point x="688.0" y="670.0" />
+      <point x="60.0" y="18.0" />
+    </edge>
+    <edge source="panels.MainPanel" target="panels.DicePanel">
+      <point x="39.72222222222217" y="-18.0" />
+      <point x="835.9763513809655" y="966.0" />
+      <point x="1361.638423453494" y="966.0" />
+      <point x="-31.75" y="18.0" />
+    </edge>
+    <edge source="java.awt.Window" target="java.awt.Window">
+      <point x="-21.090909090909122" y="18.0" />
+      <point x="1978.2104422900566" y="338.0" />
+      <point x="1891.3013513809658" y="338.0" />
+      <point x="1891.3013513809658" y="256.5" />
+      <point x="-58.0" y="-13.5" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="java.awt.Frame">
+      <point x="30.57142857142867" y="-18.0" />
+      <point x="1699.039446619061" y="986.0" />
+      <point x="2153.283538657605" y="986.0" />
+      <point x="2153.283538657605" y="222.0" />
+      <point x="2050.3013513809656" y="222.0" />
+      <point x="43.71428571428555" y="18.0" />
+    </edge>
+    <edge source="panels.MainPanel" target="extensions.ColorExtension">
+      <point x="25.27777777777783" y="-18.0" />
+      <point x="821.5319069365212" y="946.0" />
+      <point x="1047.0791291587434" y="946.0" />
+      <point x="32.0" y="18.0" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="javax.swing.WindowConstants">
+      <point x="45.85714285714289" y="-18.0" />
+      <point x="1714.3251609047752" y="996.0" />
+      <point x="2253.7835386576053" y="996.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="panels.DicePanel" target="extensions.ColorExtension">
+      <point x="-55.5625" y="-18.0" />
+      <point x="1337.825923453494" y="800.0" />
+      <point x="1079.0791291587434" y="800.0" />
+      <point x="64.0" y="18.0" />
+    </edge>
+    <edge source="panels.ControlPanel" target="models.AnswerModel">
+      <point x="-26.545454545454504" y="-18.0" />
+      <point x="330.63812920594546" y="810.0" />
+      <point x="221.65304429475032" y="810.0" />
+      <point x="221.65304429475032" y="534.0" />
+      <point x="255.3372260657302" y="534.0" />
+      <point x="-57.0" y="18.0" />
+    </edge>
+    <edge source="panels.ResultPanel" target="extensions.ColorExtension">
+      <point x="47.950000000000045" y="-18.0" />
+      <point x="809.9541291587436" y="790.0" />
+      <point x="983.0791291587435" y="790.0" />
+      <point x="-32.0" y="18.0" />
+    </edge>
+    <edge source="java.awt.Container" target="java.awt.Container">
+      <point x="-58.333333333333314" y="18.0" />
+      <point x="1539.4680180476325" y="454.0" />
+      <point x="1515.3013513809658" y="454.0" />
+      <point x="1515.3013513809658" y="416.0" />
+      <point x="-62.5" y="-0.0" />
+    </edge>
+    <edge source="java.awt.Container" target="javax.accessibility.Accessible">
+      <point x="-50.0" y="-18.0" />
+      <point x="1547.8013513809658" y="378.0" />
+      <point x="1554.3440165169727" y="378.0" />
+      <point x="1554.3440165169727" y="232.0" />
+      <point x="1520.9483371768415" y="232.0" />
+      <point x="28.888888888888914" y="18.0" />
+    </edge>
+    <edge source="java.awt.Frame" target="java.awt.Frame">
+      <point x="-29.14285714285711" y="18.0" />
+      <point x="1977.444208523823" y="172.0" />
+      <point x="1925.5870656666802" y="172.0" />
+      <point x="1925.5870656666802" y="115.0" />
+      <point x="-51.0" y="-9.0" />
+    </edge>
+    <edge source="panels.HintPanel" target="constants.Resources">
+      <point x="-35.714285714285666" y="-18.0" />
+      <point x="912.551511780016" y="660.0" />
+      <point x="845.8333333333334" y="660.0" />
+      <point x="42.33333333333337" y="18.0" />
+    </edge>
+    <edge source="panels.ResultPanel" target="panels.MainPanel">
+      <point x="17.125" y="18.0" />
+      <point x="779.1291291587436" y="916.0" />
+      <point x="792.6430180476323" y="916.0" />
+      <point x="-3.611111111111086" y="-18.0" />
+    </edge>
+    <edge source="panels.HintPanel" target="javax.accessibility.Accessible">
+      <point x="0.0" y="-18.0" />
+      <point x="948.2657974943018" y="640.0" />
+      <point x="924.5791291587435" y="640.0" />
+      <point x="924.5791291587435" y="212.0" />
+      <point x="1463.1705593990637" y="212.0" />
+      <point x="-28.888888888888914" y="18.0" />
+    </edge>
+    <edge source="java.awt.Container" target="java.awt.Component">
+      <point x="50.0" y="18.0" />
+      <point x="1647.8013513809658" y="494.0" />
+      <point x="1699.5261149546193" y="494.0" />
+      <point x="-18.533333333333303" y="-18.0" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="javax.swing.TransferHandler.HasGetTransferHandler">
+      <point x="-45.85714285714289" y="-18.0" />
+      <point x="1622.6108751904894" y="996.0" />
+      <point x="1493.8013513809658" y="996.0" />
+      <point x="1493.8013513809658" y="770.0" />
+      <point x="1313.1624624920769" y="770.0" />
+      <point x="89.58333333333326" y="18.0" />
+    </edge>
+    <edge source="java.awt.Frame" target="java.io.Serializable">
+      <point x="-25.499999999999773" y="-18.0" />
+      <point x="1981.0870656666802" y="56.0" />
+      <point x="1398.736377628084" y="56.0" />
+      <point x="61.333333333333485" y="18.0" />
+    </edge>
+    <edge source="panels.ControlPanel" target="extensions.ColorExtension">
+      <point x="53.09090909090912" y="-18.0" />
+      <point x="410.2744928423091" y="780.0" />
+      <point x="951.0791291587435" y="780.0" />
+      <point x="-64.0" y="18.0" />
+    </edge>
+    <edge source="panels.ResultPanel" target="models.AnswerModel">
+      <point x="-20.549999999999955" y="-18.0" />
+      <point x="741.4541291587436" y="690.0" />
+      <point x="718.5" y="690.0" />
+      <point x="718.5" y="474.0" />
+      <point x="369.3372260657302" y="474.0" />
+      <point x="57.0" y="18.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.666243654822335" x="1172.0" y="574.0" />
+  <SelectedNodes>
+    <node>models.AnswerModel</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
